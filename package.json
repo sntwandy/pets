@@ -15,6 +15,8 @@
   "author": "Wandy Santana <sntwandy@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/cors": "^2.8.7",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
