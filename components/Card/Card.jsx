@@ -15,8 +15,11 @@ const Card = ({ name, image, breed }) => {
       {`
         .card {
           width: 18rem;
-          margin: 20px 0px;
+          margin: 50px 0px;
           align-items: center;
+          border-radius: 9px;
+          background: linear-gradient(145deg, #e6e6e6, #ffffff);
+          box-shadow:  15px 15px 30px #d9d9d9, -15px -15px 30px #ffffff;
         }
 
         .card img {
