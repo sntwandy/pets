@@ -1,5 +1,4 @@
 import DB from '../../../database/db';
-import { useRouter } from 'next/router';
 
 const Pet = async(request, response) => {
   const db = new DB();

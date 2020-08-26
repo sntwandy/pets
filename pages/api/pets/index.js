@@ -1,5 +1,5 @@
 import DB from '../../../database/db';
-import enablePublicAccess from '@cors'
+import enablePublicAccess from 'cors';
 
 const allPets = async (request, response) => {
   try {
@@ -17,7 +17,7 @@ const allPets = async (request, response) => {
   }catch(error) {
     console.error(error.message);
     response.statusCode = 500;
-    response.end(JSON.stringify({ length: 0, data: [], error: 'Something went wrong' }));
+    response.end(JSON.stringify({ length: 0, data: [], error: 'Something went wrong' }))
   }
 };
 
