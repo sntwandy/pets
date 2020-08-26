@@ -27,8 +27,9 @@ const Card = ({ name, image, breed }) => {
         }
 
         .card-body a {
-          background-color: #40a8c4;
-          border-color: #40a8c4;
+          background-color: #ffc93c;
+          border-color: #ffc93c;
+          font-weight: 600;
         }
 
         .card-title {
