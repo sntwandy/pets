@@ -6,6 +6,7 @@ const Pet = async(request, response) => {
   const urlReq = request.url;
   const arrayId = urlReq.split('/');
   const id = arrayId[arrayId.length - 1];
+  id.toString();
 
   const pet = await db.getById(id);
 

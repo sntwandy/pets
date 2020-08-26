@@ -1,6 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 
-const Card = ({ name, image, breed }) => {
+const Card = ({ id, name, image, breed }) => {
   return(
     <>
       <div className="card">
@@ -8,7 +9,9 @@ const Card = ({ name, image, breed }) => {
         <div className="card-body">
           <h5 className="card-title">{ name }</h5>
           <p className="card-text">Breed: { breed }</p>
-          <a href="#" className="btn btn-primary">About me</a>
+          <Link href={`/pet/${id}`}>
+            <a className="btn btn-primary">About me</a>
+          </Link>
         </div>
       </div>
       <style jsx>
