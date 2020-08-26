@@ -15,7 +15,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="ul-api">
-            <Link href="/">
+            <Link href="/api/pets">
               <a>
                 <span>API</span>
               </a>
