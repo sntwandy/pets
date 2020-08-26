@@ -18,8 +18,7 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  console.log(params.id);
-  const response = await fetch(`https://pets-weld.vercel.app/api/pets/${params?.id}`);
+  const response = await fetch(`http://localhost:3000/pet/${params?.id}`);
   const pet = await response.json();
   console.log(pet);
   return {
