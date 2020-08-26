@@ -9,7 +9,6 @@ const allPets = async (request, response) => {
     const db = new DB();
     const allEntrie = await db.getAll();
     const length = allEntrie.length;
-    console.log(request.url);
 
     response.statusCode = 200;
     response.setHeader('Content-type', 'application/json');
@@ -18,7 +17,7 @@ const allPets = async (request, response) => {
   }catch(error) {
     console.error(error.message);
     response.statusCode = 500;
-    response.end(JSON.stringify({ length: 0, data: [], error: 'Something went wrong' });
+    response.end(JSON.stringify({ length: 0, data: [], error: 'Something went wrong' }));
   }
 };
 

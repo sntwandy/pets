@@ -1,18 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import fetch from 'isomorphic-unfetch';
 
 // Components
 import Layout from '../components/Layout/Layout';
 import Card from '../components/Card/Card';
 
-const Home = () => {
-  const [pets, setPets] = useState([]);
+export const getServerSideProps = async () => {
+  const response = await fetch('https://platzi-avo.vercel.app/api/avo');
+  const { data: pets } = await response.json();
 
-  useEffect( async () => {
-    const response = await fetch('https://pets-weld.vercel.app/api/pets');
-    const data = await response.json()
-    console.log(data);
-  }, []);
+  return {
+    props: {
+      pets,
+    },
+  }
+}
+
+const Home = ({ pets }) => {
 
   return(
     <Layout>
