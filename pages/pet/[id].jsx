@@ -6,7 +6,7 @@ const Pet = () => {
 
   return(
     <section className="container">
-    { window.location.pathname }
+    {  }
     </section>
   );
 };
