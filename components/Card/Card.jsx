@@ -15,6 +15,21 @@ const Card = ({ name, image, breed }) => {
       {`
         .card {
           width: 18rem;
+          margin: 20px 0px;
+          align-items: center;
+        }
+
+        .card img {
+          width: 80%;
+        }
+
+        .card-body a {
+          background-color: #40a8c4;
+          border-color: #40a8c4;
+        }
+
+        .card-title {
+          font-weight: 600;
         }
       `}
       </style>
