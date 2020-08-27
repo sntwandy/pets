@@ -4,7 +4,7 @@ import fetch from 'isomorphic-unfetch';
 // Components
 import Card from '../components/Card/Card';
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const response = await fetch('https://pets-weld.vercel.app/api/pets');
   const { data: pets } = await response.json();
 

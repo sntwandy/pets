@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
+
+import Loading from '../Loading/Loading';
+
 const Card = ({ id, name, image, breed }) => {
+
+  const [loading, setLoading] = useState({
+    loading: false,
+  });
+
   return(
     <>
-      <div className="card">
-        <img src={ image } className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">{ name }</h5>
-          <p className="card-text">Breed: { breed }</p>
-          <Link href={`/pet/${id}`}>
-            <a className="btn btn-primary">About me</a>
-          </Link>
+      { (loading.loading === true) ? <Loading/> :
+        <div className="card">
+          <img src={ image } className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">{ name }</h5>
+            <p className="card-text">Breed: { breed }</p>
+            <Link href={`/pet/${id}`}>
+              <a className="btn btn-primary" onClick={()=> setLoading({ loading: true })}>About me</a>
+            </Link>
+          </div>
         </div>
-      </div>
+      }
       <style jsx>
       {`
         .card {
